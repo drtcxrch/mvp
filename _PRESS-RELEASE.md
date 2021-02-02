@@ -1,44 +1,31 @@
-# Project Name #
 
-<!-- 
-> This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
+  'Bike Component Wear Tracker'
 
-There is an approach called "working backwards" that is widely used at Amazon. They work backwards from the customer, rather than starting with an idea for a product and trying to bolt customers onto it. While working backwards can be applied to any specific product decision, using this approach is especially important when developing new products or features.
+  Cyclists are now able to keep track of the number of hours or miles of use that they are getting out of servicable/wear components, so that they can keep their bikes riding safely and smoothly!
 
-For new initiatives a product manager typically starts by writing an internal press release announcing the finished product. The target audience for the press release is the new/updated product's customers, which can be retail customers or internal users of a tool or technology. Internal press releases are centered around the customer problem, how current solutions (internal or external) fail, and how the new product will blow away existing solutions.
+  Summary:
 
-If the benefits listed don't sound very interesting or exciting to customers, then perhaps they're not (and shouldn't be built). Instead, the product manager should keep iterating on the press release until they've come up with benefits that actually sound like benefits. Iterating on a press release is a lot less expensive than iterating on the product itself (and quicker!).
+  It's easy to loose track of how much time you've spent on the wearable parts on your bikes. Suspenstion components on your mountain bike, for example, are supposed to be serviced after every 50 hours of use, but most riders let it go until compromised performance becomes evident and in some cases it may be too late to salvage a very expensive component. Or, you might kill your whole drive train becasuse you didn't realize that you had ridden thousands of miles on the same chain. With Bike Component Wear Tracker, save money, stay safe, and keep your bike riding optimally!
 
-If the press release is more than a page and a half, it is probably too long. Keep it simple. 3-4 sentences for most paragraphs. Cut out the fat. Don't make it into a spec. You can accompany the press release with a FAQ that answers all of the other business or execution questions so the press release can stay focused on what the customer gets. My rule of thumb is that if the press release is hard to write, then the product is probably going to suck. Keep working at it until the outline for each paragraph flows. 
+  Problem:
 
-Oh, and I also like to write press-releases in what I call "Oprah-speak" for mainstream consumer products. Imagine you're sitting on Oprah's couch and have just explained the product to her, and then you listen as she explains it to her audience. That's "Oprah-speak", not "Geek-speak".
+  Ride tracking apps, such as Strava, can keep track of the mileage that you put on a bike, but they don't keep track of the mileage that you put on the bike's components, which the more useful and important information to have!
 
-Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
- -->
- 
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  Solution:
 
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Keep track of the mileage put on chains, brakepads, tires, cassettes, and chainrings, as well as the number of weeks since adding fresh sealant to tubeless tires, and the nubmer of hours spent on suspension products and dropper seatposts since last service!
 
-## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Quote from app creator:
 
-## Problem ##
-  > Describe the problem your product solves.
+  "Now your bikes are going to be riding better than ever, you're going to have more confidence in their states, which translates into more confidence and better performance in your own riding!"
 
-## Solution ##
-  > Describe how your product elegantly solves the problem.
+  How to Get Started:
 
-## Quote from You ##
-  > A quote from a spokesperson in your company.
+  If your bike is brand new, just enter the name of the bike, and regularly update mileage and time info from the ride tracking app of your choice. If notice that it's time to change a part, set the mileage back to zero on that part, and store the times spent on retired components to determine trends in part lifespans specific to your riding. For parts where the manufacturer recommends a specific number of hours or miles on the component before service or replacement, enter the number and the app will keep you notified of when it's time for service or replacement.
 
-## How to Get Started ##
-  > Describe how easy it is to get started.
+  Customer quote:
 
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "After using Bike Component Wear Tracker, I'm keeping on top of service that used to get neglected and my bikes are all riding better than ever, and as a result, I'm riding better than ever!"
 
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  Keep your bike riding safely and smoothly with Bike Component Wear Tracker! You can read more about bicycle service interavals here: https://www.slowtwitch.com/Tech/Bike_Maintenance_Schedule_3877.html#:~:text=The%20idea%20is%20to%20give,or%206%2C000%20for%20a%20year.
+
