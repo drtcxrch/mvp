@@ -54,9 +54,7 @@ updateBike = async (req, res) => {
     bike.name = body.name;
     bike.type = body.type;
     bike.mileage = body.mileage;
-    bike.hours = body.hours;
     bike.drivetrain = body.drivetrain;
-    bike.suspension = body.suspension;
     bike.brakes = body.brakes;
     bike.tires = body.tires;
     bike
@@ -94,7 +92,7 @@ deleteBike = async (req, res) => {
 };
 
 getBikeById = async (req, res) => {
-  await Bike.findOne({_.id: req.params.id}, (err, bike) => {
+  await Bike.findOne({_id: req.params.id}, (err, bike) => {
     if (err) {
       return res.status(400).json({success: false, error: err})
     }
@@ -118,7 +116,7 @@ getBikes = async (req, res) => {
         .status(404)
         .json({sucess: false, error: 'Bike not found'})
     }
-    return res.satatus(200).json({sucess: true, data: movies})
+    return res.status(200).json({sucess: true, data: bikes})
   }).catch(err => console.log(err))
 };
 

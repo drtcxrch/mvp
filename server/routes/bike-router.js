@@ -7,7 +7,7 @@ const router = express.Router();
 router.post('/bike', BikeCtrl.createBike);
 router.put('/bike/:id', BikeCtrl.updateBike);
 router.delete('/bike/:id', BikeCtrl.deleteBike);
-router.get('/bike/:id', BikeCtrl.getMovieById);
+router.get('/bike/:id', BikeCtrl.getBikeById);
 router.get('/bikes', BikeCtrl.getBikes);
 
 module.exports = router;

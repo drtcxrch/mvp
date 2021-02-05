@@ -12,16 +12,18 @@ const Drivetrain = new Schema(
 )
 
 const Brakes = new Schema(
+  {
   pads: {type: Number, required: true},
-  cables/housing/bleed: {type: Number, required: true}
+  lines: {type: Number, required: true}
+  }
 )
 
 const Tires = new Schema(
+  {
   front: {type: Number,
   required: true},
   rear: {type: Number, required: true}
-  sealant: {type: Number,
-  required: false}
+  }
 )
 
 const Bike = new Schema(
