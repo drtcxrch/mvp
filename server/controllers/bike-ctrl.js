@@ -54,9 +54,13 @@ updateBike = async (req, res) => {
     bike.name = body.name;
     bike.type = body.type;
     bike.mileage = body.mileage;
-    bike.drivetrain = body.drivetrain;
-    bike.brakes = body.brakes;
-    bike.tires = body.tires;
+    bike.chain = body.chain;
+    bike.chainring = body.chainring;
+    bike.cassette = body.cassette;
+    bike.pads = body.pads;
+    bike.lines = body.lines;
+    bike.front = body.front;
+    bike.rear = body.rear;
     bike
       .save()
       .then(() => {
