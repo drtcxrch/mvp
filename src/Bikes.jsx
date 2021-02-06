@@ -15,8 +15,14 @@ class Bikes extends React.Component {
         console.log(response.data);
       })
       .catch((err) => (
-        console.log(error);
+        console.log(error)
       ))
+  }
+
+  bikeList() {
+    return this.state.bikes.map((currentBike, i) => {
+      return <Bike bike={currentBike} key={i} />
+    });
   }
 
   render() {
@@ -26,14 +32,19 @@ class Bikes extends React.Component {
         <table className="table table-striped" style={{ marginTop: 20 }} >
           <thead>
             <tr>
-              <th>Description</th>
-              <th>Responsible</th>
-              <th>Priority</th>
-              <th>Action</th>
+              <th>Bike Name</th>
+              <th>Bike Type</th>
+              <th>Bike Mileage</th>
+              <th>Chain</th>
+              <th>Chainring</th>
+              <th>Cassette</th>
+              <th>Brake Pads</th>
+              <th>Front Tire</th>
+              <th>Rear Tire</th>
             </tr>
           </thead>
           <tbody>
-            {/* {this.todoList()} */}
+            {this.bikeList()}
           </tbody>
         </table>
       </div>

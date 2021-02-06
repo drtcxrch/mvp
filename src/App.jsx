@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 //import components
 import AddBike from './AddBike';
-// import Bikes from './Bikes';
+import Bikes from './Bikes';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class App extends React.Component {
       <div className="App">
         <div>Bike Component Wear Tracker</div>
         <AddBike />
-        {/* <Bikes /> */}
+        <Bikes />
       </div>
     )
   }
