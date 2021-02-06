@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 class AddBike extends React.Component {
   constructor(props) {
@@ -32,6 +33,33 @@ class AddBike extends React.Component {
     alert('A bike was submitted!');
     console.log(this.state);
     event.preventDefault();
+    const newBike = {
+      name: this.state.name,
+      type: this.state.type,
+      mileage: this.state.mileage,
+      chain: this.state.chain,
+      chainring: this.state.chainring,
+      cassette: this.state.cassette,
+      pads: this.state.pads,
+      lines: this.state.lines,
+      front: this.state.front,
+      rear:this.state.rear
+    }
+
+    axios.post('http://localhost:3000/api/bike', newBike);
+
+    this.setState({
+      name: '',
+      type: '',
+      mileage: 0,
+      chain: 0,
+      chainring: 0,
+      cassette: 0,
+      pads: 0,
+      lines: 0,
+      front: 0,
+      rear: 0
+    })
   }
 
   render() {

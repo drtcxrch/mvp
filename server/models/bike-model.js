@@ -9,7 +9,7 @@ const Bike = new Schema(
     chain: {type: Number, required: true},
     chainring: { type: Number, required: true },
     cassette: { type: Number, required: true },
-    pads: {type: [Brakes], required: false},
+    pads: {type: Number, required: false},
     lines: { type: Number, required: true },
     front: { type: Number, required: true },
     rear: { type: Number, required: true }
