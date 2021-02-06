@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Bike from './Bike';
 
 class Bikes extends React.Component {
   constructor(props) {
@@ -9,20 +10,24 @@ class Bikes extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http:/localhost:3000/bikes')
+    axios.get('http://localhost:3000/api/bikes')
       .then(response => {
         this.setState({bikes: response.data});
         console.log(response.data);
       })
       .catch((err) => (
-        console.log(error)
+        console.log('This is the error!!!',err)
       ))
   }
 
   bikeList() {
-    return this.state.bikes.map((currentBike, i) => {
-      return <Bike bike={currentBike} key={i} />
-    });
+    // console.log('bikes!!', this.state.bikes.data);
+    if (this.state.bikes.data !== undefined) {
+      return this.state.bikes.data.map((currentBike, i) => {
+        return <Bike bike={currentBike} key={i} />
+      });
+    }
+
   }
 
   render() {
