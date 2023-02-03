@@ -7,21 +7,32 @@ class Bikes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {bikes: []}
+
+    this.bikeList = this.bikeList.bind(this);
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/api/bikes')
-      .then(response => {
-        this.setState({bikes: response.data});
-        console.log(response.data);
-      })
-      .catch((err) => (
-        console.log('This is the error!!!',err)
-      ))
+    // axios.get('http://localhost:3000/api/bikes')
+    //   .then(response => {
+    //     this.setState({bikes: response.data});
+    //     console.log(response.data);
+    //   })
+    //   .catch((err) => (
+    //     console.log('This is the error!!!',err)
+    //   ))
+    this.bikeList();
   }
 
   bikeList() {
     // console.log('bikes!!', this.state.bikes.data);
+    axios.get('http://localhost:3000/api/bikes')
+      .then(response => {
+        this.setState({bikes: response.data});
+      })
+      .catch((err) => (
+        console.log('This is the error!!!',err)
+      ))
+
     if (this.state.bikes.data !== undefined) {
       return this.state.bikes.data.map((currentBike, i) => {
         return <Bike bike={currentBike} key={i} />

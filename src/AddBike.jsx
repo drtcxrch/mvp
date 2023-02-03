@@ -8,14 +8,14 @@ class AddBike extends React.Component {
     this.state = {
       name: '',
       type: '',
-      mileage: 0,
-      chain: 0,
-      chainring: 0,
-      cassette: 0,
-      pads: 0,
-      lines: 0,
-      front: 0,
-      rear: 0
+      mileage: '',
+      chain: '',
+      chainring: '',
+      cassette: '',
+      pads: '',
+      lines: '',
+      front: '',
+      rear: ''
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,6 +30,7 @@ class AddBike extends React.Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
 
     const newBike = {
       name: this.state.name,
@@ -44,21 +45,24 @@ class AddBike extends React.Component {
       rear:this.state.rear
     }
 
-    axios.post('http://localhost:3000/api/bike', newBike)
-      .then(response => console.log('posted:', response));
+    axios.post('http://localhost:3000/api/bike', newBike);
+
+
 
     this.setState({
       name: '',
       type: '',
-      mileage: 0,
-      chain: 0,
-      chainring: 0,
-      cassette: 0,
-      pads: 0,
-      lines: 0,
-      front: 0,
-      rear: 0
-    })
+      mileage: '',
+      chain: '',
+      chainring: '',
+      cassette: '',
+      pads: '',
+      lines: '',
+      front: '',
+      rear: ''
+    });
+
+
   }
 
   render() {
@@ -67,6 +71,7 @@ class AddBike extends React.Component {
         <label>
           Bike name:
           <input
+            value={this.state.name}
             name="name"
             type="text"
             onChange={this.handleInputChange} />
@@ -75,6 +80,7 @@ class AddBike extends React.Component {
         <label>
           Bike type:
           <input
+            value={this.state.type}
             name="type"
             type="text"
             onChange={this.handleInputChange} />
@@ -83,6 +89,7 @@ class AddBike extends React.Component {
         <label>
           Bike mileage:
           <input
+            value={this.state.mileage || ''}
             name="mileage"
             type="number"
             onChange={this.handleInputChange} />
@@ -91,6 +98,7 @@ class AddBike extends React.Component {
         <label>
           Chain:
           <input
+            value={this.state.chain || ''}
             name="chain"
             type="number"
             onChange={this.handleInputChange} />
@@ -99,6 +107,7 @@ class AddBike extends React.Component {
         <label>
           Chainring:
           <input
+            value={this.state.chainring || ''}
             name="chainring"
             type="number"
             onChange={this.handleInputChange} />
@@ -107,6 +116,7 @@ class AddBike extends React.Component {
         <label>
           Cassette:
           <input
+            value={this.state.cassette || ''}
             name="cassette"
             type="number"
             onChange={this.handleInputChange} />
@@ -115,6 +125,7 @@ class AddBike extends React.Component {
         <label>
           Pads:
           <input
+            value={this.state.pads || ''}
             name="pads"
             type="number"
             onChange={this.handleInputChange} />
@@ -123,6 +134,7 @@ class AddBike extends React.Component {
         <label>
           Lines:
           <input
+            value={this.state.lines || ''}
             name="lines"
             type="number"
             onChange={this.handleInputChange} />
@@ -131,6 +143,7 @@ class AddBike extends React.Component {
         <label>
           Front:
           <input
+            value={this.state.front || ''}
             name="front"
             type="number"
             onChange={this.handleInputChange} />
@@ -139,6 +152,7 @@ class AddBike extends React.Component {
         <label>
           Rear:
           <input
+            value={this.state.rear || ''}
             name="rear"
             type="number"
             onChange={this.handleInputChange} />
