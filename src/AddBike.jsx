@@ -30,9 +30,7 @@ class AddBike extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A bike was submitted!');
-    console.log(this.state);
-    event.preventDefault();
+
     const newBike = {
       name: this.state.name,
       type: this.state.type,
@@ -46,7 +44,8 @@ class AddBike extends React.Component {
       rear:this.state.rear
     }
 
-    axios.post('http://localhost:3000/api/bike', newBike);
+    axios.post('http://localhost:3000/api/bike', newBike)
+      .then(response => console.log('posted:', response));
 
     this.setState({
       name: '',
