@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-class AddBike extends React.Component {
+class FormBike extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -164,4 +164,4 @@ class AddBike extends React.Component {
   }
 }
 
-export default AddBike;
+export default FormBike;
