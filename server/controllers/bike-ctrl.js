@@ -117,8 +117,8 @@ getBikes = async (req, res) => {
     }
     if (!bikes.length) {
       return res
-        .status(404)
-        .json({sucess: false, error: 'Bike not found'})
+        .status(204)
+        .json({sucess: false, error: 'Bikes not found'})
     }
     return res.status(200).json({sucess: true, data: bikes})
   }).catch(err => console.log(err))

@@ -10,6 +10,7 @@ class Bikes extends React.Component {
 
     this.bikeList = this.bikeList.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   componentDidMount() {
@@ -24,9 +25,18 @@ class Bikes extends React.Component {
     });
   }
 
+  handleEdit(bike) {
+    console.log(bike)
+    axios.put(`http://localhost:3000/api/bike/${bike._id}`, bike)
+      .then(response => console.log('Edit successful'))
+      .catch(error => {
+        console.error('There was an error!', error);
+    });
+  }
+
   bikeList() {
 
-    axios.get('http://localhost:3000/api/bikes')
+    axios.get('http://localhost:3000/api/bikes', {validateStatus: false})
       .then(response => {
         this.setState({bikes: response.data});
       })
@@ -36,7 +46,7 @@ class Bikes extends React.Component {
 
     if (this.state.bikes.data !== undefined) {
       return this.state.bikes.data.map((currentBike, i) => {
-        return <Bike bike={currentBike} key={i} handleDelete={this.handleDelete}/>
+        return <Bike bike={currentBike} key={i} handleDelete={this.handleDelete} handleEdit={this.handleEdit}/>
       });
     }
 
