@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 //import components
 import FormBike from './FormBike';
 import Bikes from './Bikes';
+import Strava from './Strava'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div>Bike Component Wear Tracker</div>
+        <Strava />
         <FormBike />
         <Bikes />
       </div>
