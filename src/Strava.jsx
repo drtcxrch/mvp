@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import api from './api/api.js';
 import axios from 'axios';
+const redirectUrl = "http://localhost:3000/redirect";
+const scope = "profile:read_all"
 
 class Strava extends React.Component {
   constructor(props) {
@@ -15,16 +16,12 @@ class Strava extends React.Component {
   }
 
   handleLogin() {
-    let config = {
-      headers: {
-        Authorization: process.env.ACCESS_TOKEN,
-      },
-    };
+    // window.location = `http://www.strava.com/oauth/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&redirect_uri=${redirectUrl}/exchange_token&approval_prompt=force&scope=${scope}`;
 
     axios
-      .get("https://www.strava.com/api/v3/athlete", config)
+      .get("http://localhost:3000/api/bikes/strava", {validateStatus: false})
       .then((response) => {
-        console.log(response.data);
+        console.log(response);
       })
       .catch((err) => console.log("Error:", err));
   }

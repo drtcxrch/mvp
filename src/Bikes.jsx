@@ -26,7 +26,6 @@ class Bikes extends React.Component {
   }
 
   handleEdit(bike) {
-    console.log(bike)
     axios.put(`http://localhost:3000/api/bike/${bike._id}`, bike)
       .then(response => console.log('Edit successful'))
       .catch(error => {
